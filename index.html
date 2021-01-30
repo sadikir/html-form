@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML survey form</title>
+<meta name = "viewport" content = "width=device-width, initial-scale = 1, minimum-scale = 1 "/>
+</head>
+<body>
+
+ <script src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <style>
+    main{
+      
+      width:65%;
+      position:relative;
+      background:rgba(68,8,4,0.1);
+      margin:auto;
+      border-radius:10px;
+      border-left:5px solid rgba(68,8,4,0.5)
+    }
+    #content-wrapper{
+      width:80%;
+      margin:auto;
+      position:relative;
+      overflow: auto;
+      margin-top:20px;
+    }
+    #title{
+      background:rgba(68,8,4,0.9);
+      color:white;
+      text-transform: uppercase;
+      display:block;
+      margin-top:20px !important;
+      text-align:center;
+      border-top-right-radius:10px;
+      border-bottom-left-radius: 10px;
+    }
+    #description{
+      font-size:20px;
+    }
+    #group1,#group2,#group3{
+      display:block;
+      overflow:auto;
+      background:rgba(68,8,4,0.5); 
+      border-top-right-radius:10px;
+      border-bottom-left-radius: 10px;
+      margin-top:20px;
+
+    }
+    #name-label,#email-label,#number-label{
+      font-size:20px;
+      margin-left:20px;
+      margin-top:10px;
+    }
+    #name, #email,#number{
+      margin-left:20px;
+      width:90%;
+      height:35px;
+      border-top-right-radius:10px;
+      border-bottom-left-radius: 10px;
+      font-size:20px;
+      color:rgba(68,8,4,0.5);
+    }
+    input::placeholder{
+      color:rgba(68,8,4,0.5);
+    }
+    #number{
+      margin-bottom:15px;
+    }
+    #group2{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+    }
+    #subgroup2-1{
+      margin-left:20px;
+      margin-top:20px;
+      border-right:1px solid white;
+      margin-bottom:20px;
+      font-size:20px;
+    }
+    #subgroup2-1 select{
+      width:90%;
+      height: 35px;
+      border-top-right-radius:10px;
+      border-bottom-left-radius: 10px;
+    }
+    #subgroup2-2{
+      margin-left:15px;
+      margin-top:20px;
+      border-right:1px solid white;
+      margin-bottom:20px;
+      font-size:20px;
+    }
+    #subgroup2-2>p, #subgroup2-3>p{
+      display:block;
+      margin-top:0px;
+    }
+    #subgroup2-3{
+      margin-left:15px;
+      margin-top:20px;
+      margin-bottom:20px;
+      font-size:20px;
+    }
+    #group3>p{
+      font-size:20px;
+      margin-left:20px;
+    }
+    #group3>textarea{
+      margin-left:20px;
+      margin-bottom:20px;
+      width:90%;
+      height:100px;
+      border-top-right-radius:10px;
+      border-bottom-left-radius: 10px;
+    }
+    input[type=submit]{
+      margin-bottom:20px;
+      display:block;
+      width:100%;
+      background:rgba(68,8,4,0.9); 
+      border-top-right-radius:10px;
+      border-bottom-left-radius: 10px;
+      margin-top:20px;
+      font-size:20px;
+      color:white;
+      cursor:pointer;
+      height:35px;
+    }
+  </style>
+  <main> 
+  <div id = "content-wrapper">
+  <h1 id = "title">Responsive html form</h1>
+  <p id = "description">This is a html form I created from scratch. I love it so much. What do you think about it.</p>
+  <form id = "survey-form">
+   <div id = "group1">
+    <label id = "name-label">Name:</label><br>
+    <input id = "name" type = "text" placeholder = "sadiki rungo" required><br>
+
+    <label id = "email-label" >Email:</label><br>
+    <input id = "email" type = "email" placeholder = "sadikirungo@gmail.com" required><br>
+
+    <label id = "number-label" >Number</label><br>
+    <input  id = "number" type = "number" min= 1 max = 10 placeholder = "1" required><br>
+   </div>
+   <div id = "group2">
+     <div id = "subgroup2-1">
+    <label id = "selection">Select one thing:</label><br>
+    <select id = "dropdown" name = "options">
+      <option value="Option">Option</option>
+      <option value="Option">Option</option>
+      <option value="Option">Option</option>
+      
+    </select>
+    </div>
+    
+     <div id = "subgroup2-2">
+    <p> Choose one</p>
+    <input type  = "radio" name = "button" value = "button">
+    <label>button</label><br>
+    <input type  = "radio" name = "button" value = "button">
+    <label>button</label><br>
+    <input type  = "radio" name = "button" value = "button">
+    <label>button</label><br>
+    <input type  = "radio" name = "button" value = "button">
+    <label>button</label><br>
+    <input type  = "radio" name = "button" value = "button">
+    <label>button</label><br>
+    </div>
+
+    <div id = "subgroup2-3">
+    <p>Choose multiple</p>
+    <input type  = "checkbox" name = "button" value = "button">
+    <label>button</label><br>
+    <input type  = "checkbox" name = "button" value = "button">
+    <label>button</label><br>
+    <input type  = "checkbox" name = "button" value = "button">
+    <label>button</label><br>
+    <input type  = "checkbox" name = "button" value = "button">
+    <label>button</label><br>
+    <input type  = "checkbox" name = "button" value = "button">
+    <label>button</label><br>
+    </div>
+  </div>
+  <div id = "group3"> 
+
+    <p>Write us a message:</p>
+    
+      <textarea>
+
+      </textarea>
+
+   
+    
+  </div>
+  <div id = "group4">
+  <input type="submit" id = "submit" value = "submit">
+  </div>
+  </form>
+</div>
+</main>
+</body>
+</html>
